@@ -1,0 +1,10 @@
+---
+- name: Full Cisco Switch Automation
+  hosts: cisco_switches
+  gather_facts: false
+  become_method: enable # Use enable mode for privilege escalation
+  roles:
+    - base_config
+    - vlan_config
+    - interface_config
+    - ssh_config

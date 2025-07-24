@@ -1,0 +1,12 @@
+---
+- name: Set hostname
+  cisco.ios.ios_config:
+    lines: hostname {{ inventory_hostname }}
+
+- name: Enable logging
+  cisco.ios.ios_config:
+    lines:
+      - logging buffered 10000
+      - logging console
+      - logging monitor
+    save: true
