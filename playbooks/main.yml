@@ -2,7 +2,7 @@
 - name: Full Cisco Switch Automation
   hosts: cisco_switches
   gather_facts: false
-  become_method: enable # Use enable mode for privilege escalation
+  become_method: enable 
   roles:
     - base_config
     - vlan_config
